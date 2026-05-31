@@ -1,0 +1,349 @@
+CI: on
+name: atletas-gama
+image: maven:3.8-eclipse-temurin-17
+
+stages:
+  - system
+  - provided
+
+build:
+  stage: provided
+  script:
+    - mvn clean package
+  artifacts:
+    paths: Principalribeiroednilson1234-patch-10filial
+      - target/*.jar
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <activeProfiles>
+    <activeProfile>github</activeProfile>
+  </activeProfiles>
+
+  <profiles>
+    <profile>
+      <id>github</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/Principalribeiroednilson1234-patch-10filial/patch-atletas-gama</url>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
+  <servers>
+    <server>
+      <id>github</id>
+      <username>ribeiroednilson@gmail.com</username>
+      <password>GitHub2@2025</password>
+    </server>
+  </servers>
+</settings>
+
+<distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub Principalribeiroednilson1234-patch-10filial Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/Principalribeiroednilson1234-patch-10filial/patch-atletas-gama</url>
+   </repository>
+</distributionManagement>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.https://ffdf.com.br/clubes/view.php?q=324/</groupId>
+    <artifactId>com.https://ffdf.com.br/</artifactId>
+    <version>1</version>
+    <relativePath>../parent/pom.xml</relativePath>
+  </parent>
+  <groupId>com.https://segama.com.br/</groupId>
+  <artifactId>segama.com.br/</artifactId>
+  <version>1</version>
+  <modules>
+    <module>../patch-atletas-gama</module>
+  </modules>
+</project>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Coordenadas do Projeto -->
+    <groupId>com.https://ffdf.com.br/pt/clubes/view.php?q=324/segama.com.br/patch-atletas-gama</groupId> <!-- Identificador do grupo (domínio reverso) -->
+    <artifactId>patch-atletas-gama</artifactId> <!-- Nome do artefato (o jar/war gerado) -->
+    <version>1.0-SNAPSHOT</version> <!-- Versão do projeto -->
+
+    <!-- Propriedades (Opcional, para configurações comuns) -->
+    <properties>
+        <maven.provided.source>1.8</maven.provided.source>
+        <maven.provided.target>1.8</maven.provided.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- Dependências (Bibliotecas externas necessárias) -->
+    <dependencies>
+        <!-- Exemplo: Dependência para testes com JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>provided</scope> <!-- 'test' significa que é usada apenas em testes -->
+        </dependency>
+    </dependencies>
+
+    <!-- Configurações de Build (Plugins, etc. - Opcional para um POM muito básico) -->
+    <build>
+        <plugins>
+            <!-- Exemplo: Configurações do Compilador Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-verifier-plugins</artifactId>
+                <artifactId>maven-site-plugins</artifactId>
+              <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.provided.source}</source>
+                    <target>${maven.provided.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+CD: on
+name: patch-atletas-gama
+on:
+  push:
+    branches: [ Principalribeiroednilson1234-patch-10filial ] # Deploy após merge na main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Login on Cloud
+        run: echo "Login..."
+      - name: Deploy para Produção
+        run: ./deploy.sh
+
+on: CI/CD
+ name: patch-atletas-gama
+  push:
+    branches:[Principalribeiroednilson1234-patch-10filial]
+region: Brasil
+
+com.www.segama.FileStreamSourceConnector;
+
+package com.www.segama;
+
+public class FileStreamSourceConnector extends SourceConnector {
+    private Map<String, String> props;
+
+@Override
+public Class<? extends Task> taskClass(patch-atletas-gama) {
+    return FileStreamSourceTask.class;
+}
+
+@Override
+public void start(Map<String, String> props) {
+    //Initialization logic and setting up of resources can take place in this method.
+    //This connector doesn't need to do any of that, but we do log a helpful message to the user.'
+
+    this.props = props;
+    AbstractConfig config = new AbstractConfig(CONFIG_DEF, props);
+    String filename = config.getString(FILE_CONFIG);
+    filename = (filename == null || filename.isEmpty()) ? "standard input" : config.getString(FILE_CONFIG);
+    log.info("Starting file source connector reading from {}", filename);
+}
+
+@Override
+public void stop() {
+    //Nothing to do since no background monitoring is required.
+}
+
+@Override
+public List<Map<String, String>> taskConfigs(int maxTasks) {
+    //Note that the task configs could contain configs additional to or different from the connector configs if needed. For instance,
+    //if different tasks have different responsibilities, or if different tasks are meant to process different subsets of the source data stream).
+    ArrayList<Map<String, String>> configs = new ArrayList<>();
+    //Only one input stream makes sense.
+    configs.add(props);
+    return configs;
+}
+
+public class FileStreamSourceTask extends SourceTask {
+    private String filename;
+    private InputStream stream;
+    private String topic;
+    private int batchSize;
+
+    @Override
+    public void start(Map<String, String> props) {
+        filename = props.get(FileStreamSourceConnector.FILE_CONFIG);
+        stream = openOrThrowError(filename);
+        topic = props.get(FileStreamSourceConnector.TOPIC_CONFIG);
+        batchSize = props.get(FileStreamSourceConnector.TASK_BATCH_SIZE_CONFIG);
+    }
+
+    @Override
+    public synchronized void stop() {
+        stream.close();
+    }
+}
+
+@Override
+public List<SourceRecord> poll() throws InterruptedException {
+    try {
+        ArrayList<SourceRecord> records = new ArrayList<>();
+        while (streamValid(stream) && records.isEmpty()) {
+            LineAndOffset line = readToNextLine(stream);
+            if (line != null) {
+                Map<String, Object> sourcePartition = Collections.singletonMap("filename", filename);
+                Map<String, Object> sourceOffset = Collections.singletonMap("position", streamOffset);
+                records.add(new SourceRecord(sourcePartition, sourceOffset, topic, Schema.STRING_SCHEMA, line))
+                if (records.size() >= batchSize) {
+                    return records;
+                }
+            } else {
+                Thread.sleep(1);
+            }
+        }
+        return records;
+    } catch (IOException e) {
+        //Underlying stream was killed, probably as a result of calling stop. Allow to return
+        //null, and driving thread will handle any shutdown if necessary.
+    }
+    return null;
+}
+
+public abstract class SinkTask implements Task {
+    public void initialize(SinkTaskContext context) {
+        this.context = context;
+    }
+
+    public abstract void put(Collection<SinkRecord> records)
+
+    public void flush(Map<TopicPartition, OffsetAndMetadata> currentOffsets) {
+    }
+}
+
+private ErrantRecordReporter reporter;
+
+@Override
+public void start(Map<String, String> props) {
+    ...
+    try {
+        reporter = context.errantRecordReporter(); // may be null if DLQ not enabled
+    } catch (NoSuchMethodException | NoClassDefFoundError e) {
+        //Will occur in Connect runtimes earlier than 2.6
+        reporter = null;
+    }
+}
+
+@Override
+public void put(Collection<SinkRecord> records) {
+    for (SinkRecord record: records) {
+        try {
+            //attempt to process and send record to data sink
+            process(record)
+        } catch(Exception e) {
+            if (reporter != null) {
+                //Send errant record to error reporter
+                reporter.report(record, e)
+            } else {
+                //Theres no error reporter, so fail
+                throw new ConnectException("Failed on record", e)
+            }
+        }
+    }
+}
+
+stream = new FileInputStream(filename)
+Map<String, Object> offset = context.offsetStorageReader().offset(Collections.singletonMap(FILENAME_FIELD, filename))
+if (offset != null) {
+    Long lastRecordedOffset = (Long) offset.get("position")
+    if (lastRecordedOffset != null)
+        seekToOffset(stream, lastRecordedOffset)
+}
+
+private int recordsSent;
+
+@Override
+public void start(Map<String, String> props) {
+    this.recordsSent = 0;
+}
+
+@Override
+public List<SourceRecord> poll() {
+    List<SourceRecord> records = fetchRecords();
+    boolean shouldCommit = false;
+    for (SourceRecord record : records) {
+        if (++this.recordsSent >= 10) {
+            shouldCommit = true;
+        }
+    }
+    if (shouldCommit) {
+        this.recordsSent = 0;
+        this.context.transactionContext().commitTransaction()
+    }
+    return records;
+}
+
+private int recordsSent;
+
+@Override
+public void start(Map<String, String> props) {
+    this.recordsSent = 0;
+};
+
+@Override
+public List<SourceRecord> poll() {
+    List<SourceRecord> records = fetchRecords();
+    for (SourceRecord record : records) {
+        if (++this.recordsSent % 10 == 0) {
+            this.context.transactionContext().commitTransaction(record)
+        }
+    }
+    return records;
+}
+
+@Override
+public ExactlyOnceSupport exactlyOnceSupport(Map<String, String> props) {
+    //This connector cannot provide exactly-once semantics under any conditions
+    return ExactlyOnceSupport.UNSUPPORTED;
+}
+
+@Override
+public ExactlyOnceSupport exactlyOnceSupport(Map<String, String> props) {
+    //This connector can always provide exactly-once semantics
+    return ExactlyOnceSupport.SUPPORTED;
+}
+
+@Override
+public ConnectorTransactionBoundaries canDefineTransactionBoundaries(Map<String, String> props) {
+    //This connector can always define its own transaction boundaries
+    return ConnectorTransactionBoundaries.SUPPORTED;
+}
+
+if (inputsChanged())
+    this.context.requestTaskReconfiguration
+
+FileStreamSourceConnector;
+
+static final ConfigDef CONFIG_DEF = new ConfigDef()
+    .define(FILE_CONFIG, Type.STRING, null, Importance.HIGH, "Source filename. If not specified, the standard input will be used")
+    .define(TOPIC_CONFIG, Type.STRING, ConfigDef.NO_DEFAULT_VALUE, new ConfigDef.NonEmptyString(), Importance.HIGH, "The topic to publish data to")
+    .define(TASK_BATCH_SIZE_CONFIG, Type.INT, DEFAULT_TASK_BATCH_SIZE, Importance.LOW,
+        "The maximum number of records the source task can read from the file each time it is polled");
+
+public ConfigDef config() {
+    return CONFIG_DEF;
+}
