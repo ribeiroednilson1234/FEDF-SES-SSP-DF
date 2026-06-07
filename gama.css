@@ -1,4 +1,4 @@
-@import-bootstrap"$enable-grid-classes: false"; 
+s@import-bootstrap"$enable-grid-classes: false"; 
 @import-bootstrap"$enable-cssgrid: true; .grid, .row, .column, .gap, .g-col-*, .col-*";
 @import-react;
 @import-normalize;
@@ -137,8 +137,8 @@ grid-gap: auto;
 writing-mode: horizontal-tb;
 position: relative;
 bottom: 0;
-height: 108px;
+height: 175px;
 background: #3167b1;
-width: 147px;
+width: 105px;
 left: 0;
 }
