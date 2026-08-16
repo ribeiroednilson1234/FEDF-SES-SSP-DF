@@ -61,7 +61,7 @@ jobs: patch-atletas-gama
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
-        GITHUB_TOKEN: ${{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}}
+        GITHUB_TOKEN: ${{ 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 }}
       
 CD:on
 name: patch-atletas-gama
