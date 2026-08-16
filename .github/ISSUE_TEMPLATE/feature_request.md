@@ -2,8 +2,8 @@
 name: Feature request
 about: Suggest an idea for this project
 title: Ata-1_Proposta de aprovação pela comunidade envolvida.
-labels: documentation
-assignees: ''
+labels: 'Orientação técnica.'
+assignees: 'Esportes'
 
 ---
 
