@@ -1,6 +1,6 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: 'Escola_Classe'
+about: 'Esportistas do Brasil'
 title: Ata-1_Proposta de aprovação pela comunidade envolvida.
 labels: 'Orientação técnica.'
 assignees: 'Esportes'
