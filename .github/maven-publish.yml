@@ -10,7 +10,7 @@ jobs:
     steps:
       - run: |
           gh issue --repo ${{ github.repository }} \
-            create --title "Issue title" --body "Issue body"
+            create --title "Escola_Classe" --body "Issue body"
         env:
           GH_TOKEN: ${{ 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 }}
 
