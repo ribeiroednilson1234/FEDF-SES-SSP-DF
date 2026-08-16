@@ -1,7 +1,7 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
-title: ''
+name: 'Escola_Classe'
+about: 'Atividades esportivas em escolas' do Brasil.
+title: 'Esportistas do Brasil'
 labels: ''
 assignees: ''
 
